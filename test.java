@@ -17,6 +17,7 @@ class Main {
             balance -= userWithdraw;
             System.out.printf("You withdrew $%.2f", userWithdraw);
         }
+
         else if(userChoice.equals("2")){
             System.out.print("How much money do you want to deposit: ");
             double userDeposit = keyboard.nextDouble();
