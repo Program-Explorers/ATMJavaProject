@@ -16,13 +16,16 @@ class Main {
             double userWithdraw = keyboard.nextDouble();
             balance -= userWithdraw;
             System.out.printf("You withdrew $%.2f", userWithdraw);
-        }
 
-        else if(userChoice.equals("2")){
+        } else if(userChoice.equals("2")){
             System.out.print("How much money do you want to deposit: ");
             double userDeposit = keyboard.nextDouble();
             balance += userDeposit;
             System.out.printf("You have successfully deposited $%.2f", userDeposit);
+
+        } else if(userChoice.equals("3")){
+            System.out.print("Your current balance is ", balance);
+
         }
 
     }
