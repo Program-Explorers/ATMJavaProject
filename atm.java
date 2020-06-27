@@ -1,10 +1,9 @@
 //Atm machine with Java!
-
 import java.util.*;
 
 class Main {
-    public static void main(String [] args){
-        Scanner keyboard = new Scanner(System.in);
+    public static void main(final String[] args) {
+        final Scanner keyboard = new Scanner(System.in);
         double balance = 10000.00;
         String userChoice;
         boolean running = true;
@@ -12,20 +11,19 @@ class Main {
 
         while (running == true) {
 
-            System.out.print("Type 1 for Withdraw"
-                    + "\nType 2 for Deposit" + "\nType 3 for Check Balance"
+            System.out.print("Type 1 for Withdraw" + "\nType 2 for Deposit" + "\nType 3 for Check Balance"
                     + "\nType 4 to Exit" + "\nChoose the operation you want to perform: ");
             userChoice = keyboard.nextLine();
 
-            if(userChoice.equals("1")){
+            if (userChoice.equals("1")) {
                 System.out.print("How much money(dollars) do you want to withdraw: ");
-                double userWithdraw = keyboard.nextDouble();
+                final double userWithdraw = keyboard.nextDouble();
                 balance -= userWithdraw;
                 System.out.printf("You withdrew $%.2f", userWithdraw);
-                
-            } else if(userChoice.equals("2")){
+
+            } else if (userChoice.equals("2")) {
                 System.out.print("How much money do you want to deposit: ");
-                double userDeposit = keyboard.nextDouble();
+                final double userDeposit = keyboard.nextDouble();
                 balance += userDeposit;
                 System.out.printf("You have successfully deposited $%.2f", userDeposit);
 
@@ -40,7 +38,7 @@ class Main {
 
             }
 
-            System.out.print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+            System.out.print("\n\n\n\n\n\n\n\n\n");
 
         }
     }
